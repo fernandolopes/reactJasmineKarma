@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 
 export default class CommentsComponent extends Component {
+    constructor(props) {
+        super(props);
 
-    render = () => 
-        <div>test</div>
-    
+        this.state = {};
+    }
+
+    render() {
+        return (
+            <div>test</div>
+        );
+    }
 };

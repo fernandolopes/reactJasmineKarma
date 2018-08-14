@@ -1,23 +1,22 @@
-import CommentsComponent from "../src/components/comment";
+import React from 'react';
+import CommentsComponent from '../src/components/comment';
+import { renderIntoDocument, scryRenderedDOMComponentsWithTag } from 'react-dom/test-utils';
+import expect from 'expect';
 
-// import Page from 'react-page-object'
-import React from 'react'
-// import App from 'App'
+describe('AppSpec', function () {
+    it('comments', function () {
+        var comments = renderIntoDocument(<CommentsComponent />);
 
-describe('AppSpec', function() {
+        expect(comments).toBeTruthy();
 
-    var TestUtils = React.addons.TestUtils;
-    it('comments', function() {
-        var comments = renderComponent(CommentsComponent);
-        expect(comments).toContainElement("div.empty");
+        var batata = scryRenderedDOMComponentsWithTag(comments, 'batata');
+
+        console.log(batata);
+
+        expect(batata).toBeTruthy('No!');
     });
 
-    function renderComponent(component) {
-        var commet_component = TestUtils.renderIntoDocument(component);
-        return (commet_component.getDOMNode());
-    }
-
-    it('teste', function() {
+    it('teste', function () {
         expect(true).toBe(true);
     });
 });
