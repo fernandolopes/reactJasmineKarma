@@ -51,7 +51,9 @@
     "babel-preset-stage-1": "^6.24.1",
     "babel-runtime": "6.26.0",
     "enzyme": "^2.9.1",
+    "enzyme-adapter-react-16": "^1.4.0",
     "expect": "^23.5.0",
+    "expect-element": "^1.1.1",
     "jasmine-core": "^2.5.2",
     "karma": "^1.7.1",
     "karma-chrome-launcher": "^2.2.0",
@@ -71,7 +73,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "npm run karma -- --single-run",
-    "karma": "BABEL_ENV=development NODE_ENV=test node_modules/karma/bin/karma start config/karma.conf.js"
+    "karma": "SET BABEL_ENV=development | SET NODE_ENV=test | node_modules/karma/bin/karma start config/karma.conf.js"
   },
   "jest": {
     "collectCoverageFrom": [

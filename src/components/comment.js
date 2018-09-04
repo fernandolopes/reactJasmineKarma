@@ -9,7 +9,7 @@ export default class CommentsComponent extends Component {
 
     render() {
         return (
-            <div>test</div>
+            <div id="col">{this.props.texto}</div>
         );
     }
 };
